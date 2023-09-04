@@ -1,4 +1,5 @@
-﻿using OOPPolymorphism.DataVerification;
+﻿// Tobias Skog .NET23
+using OOPPolymorphism.DataVerification;
 
 namespace OOPPolymorphism.Geometri
 {

@@ -1,4 +1,5 @@
-﻿namespace OOPPolymorphism.Geometri
+﻿// Tobias Skog .NET23
+namespace OOPPolymorphism.Geometri
 {
     // Creating an abstract class Geometri that will hold all the base functionality
     // that the subclasses will use

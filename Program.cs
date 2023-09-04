@@ -1,4 +1,5 @@
-﻿using OOPPolymorphism.Geometri;
+﻿// Tobias Skog .NET23
+using OOPPolymorphism.Geometri;
 internal class Program
 {
 
