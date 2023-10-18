@@ -9,8 +9,8 @@ namespace OOPPolymorphism.Geometri
         // The Parallellogram class requires the _Height and _BaseParallelLength attributes
         // The access modifier is set to protected to keep the attributes inside the class
         // and encapsulate them
-        protected int _Height { get; set; }
-        protected int _BaseParallelLength { get; set; }
+        protected double _Height { get; set; }
+        protected double _BaseParallelLength { get; set; }
 
         // The base constructor for the Rektangel class
         public Parallellogram()
@@ -22,18 +22,18 @@ namespace OOPPolymorphism.Geometri
         }
         // A overload constructor for the Parallellogram Class allowing the user
         // to pass in a height and a baseParallelLength when creating the Parallellogram
-        public Parallellogram(int height, int baseParallelLength)
+        public Parallellogram(double height, double baseParallelLength)
         {
-            // Creating two new int variables to recieve the return of the GetPositiveInt method wich
+            // Creating two new double variables to recieve the return of the GetPositiveInt method wich
             // is a method in its own class designed to prompt the user for a new value
             // incase the original value passed in is not within the accepted range and 
             // could cause the program to crash when doing the Area calculation
             // The method will keep asking the user for a value until it recieves one
-            // that is accepted, takes a int and a prompt as input
-            int controlledHeight = VerifiedUserInput.GetPositveInt(height,
+            // that is accepted, takes a double and a prompt as input
+            double controlledHeight = VerifiedUserInput.GetPositiveDouble(height,
                                       "Fel format på höjden vid skapande av Triangel objektet\n" +
                                       "Ange höjden med ett positivt heltal: ");
-            int controlledBaseParallelLength = VerifiedUserInput.GetPositveInt(baseParallelLength,
+            double controlledBaseParallelLength = VerifiedUserInput.GetPositiveDouble(baseParallelLength,
                                                "Fel format på basbredden vid skapande av Triangel objektet\n" +
                                                "Ange baslängden med ett positivt heltal: ");
 
@@ -50,7 +50,7 @@ namespace OOPPolymorphism.Geometri
         {
             get { return _Height; }
         }
-        public int BaseParallelLength
+        public double BaseParallelLength
         {
             get { return _BaseParallelLength; }
         }

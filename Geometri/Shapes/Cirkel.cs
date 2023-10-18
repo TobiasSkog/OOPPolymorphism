@@ -28,7 +28,7 @@ namespace OOPPolymorphism.Geometri
             // could cause the program to crash when doing the Area calculation
             // The method will keep asking the user for a value until it recieves one
             // that is accepted, takes a double and a prompt as input
-            double controlledRadius = VerifiedUserInput.GetPositveDouble(radius,
+            double controlledRadius = VerifiedUserInput.GetPositiveDouble(radius,
                                    "Fel format på radien vid skapande av Cirkel objektet\n" +
                                    "Ange radien med en positiv siffra: ");
 

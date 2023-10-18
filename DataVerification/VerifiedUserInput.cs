@@ -7,12 +7,12 @@ namespace OOPPolymorphism.DataVerification
     {
         // public static method that takes an int and a prompt as input. The method checks if the value is greater than 0
         // in other words, it's making sure that the value is not a negative value
-        public static int GetPositveInt(int unkownInt, string prompt)
+        public static int GetPositiveInt(int unknownInt, string prompt)
         {
             // If the int have a positive value we return the int
-            if (unkownInt > 0)
+            if (unknownInt > 0)
             {
-                return unkownInt;
+                return unknownInt;
             }
             // If the int have a negative value we start a do while (true) loop (infite loop until we get a value we accept)
             else
@@ -41,12 +41,12 @@ namespace OOPPolymorphism.DataVerification
         }
         // public static method that takes a double and a prompt as input. The method checks if the value is greater than 0
         // in other words, it's making sure that the value is not a negative value
-        public static double GetPositveDouble(double unkownDouble, string prompt)
+        public static double GetPositiveDouble(double unknownDouble, string prompt)
         {
             // If the double have a positive value we return the double
-            if (unkownDouble > 0.0)
+            if (unknownDouble > 0.0)
             {
-                return unkownDouble;
+                return unknownDouble;
             }
             // If the double have a negative value we start a do while (true) loop (infite loop until we get a value we accept)
             else

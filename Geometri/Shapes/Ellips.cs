@@ -9,8 +9,8 @@ namespace OOPPolymorphism.Geometri
         // The Ellips class requires the _MajorAxis and _MinorAxis attributes
         // The access modifier is set to protected to keep the attributes
         // inside the class and encapsulate them
-        protected int _MajorAxis { get; set; }
-        protected int _MinorAxis { get; set; }
+        protected double _MajorAxis { get; set; }
+        protected double _MinorAxis { get; set; }
 
         // The base constructor for the Ellips class
         public Ellips()
@@ -23,19 +23,19 @@ namespace OOPPolymorphism.Geometri
 
         // A overload constructor for the Ellips Class allowing the user
         // to pass in a radius and a height when creating the Ellips
-        public Ellips(int majorAxis, int minorAxis)
+        public Ellips(double majorAxis, double minorAxis)
         {
-            // Creating two new int variables to recieve the return of the GetPositiveInt method wich
+            // Creating two new double variables to recieve the return of the GetPositiveDouble method wich
             // is a method in its own class designed to prompt the user for a new value
             // incase the original value passed in is not within the accepted range and 
             // could cause the program to crash when doing the Area calculation
             // The method will keep asking the user for a value until it recieves one
-            // that is accepted, takes a int and a prompt as input
-            int controlledMajorAxis = VerifiedUserInput.GetPositveInt(majorAxis,
+            // that is accepted, takes a double and a prompt as input
+            double controlledMajorAxis = VerifiedUserInput.GetPositiveDouble(majorAxis,
                                    "Fel format på radien vid skapande av Ellips objektet\n" +
                                    "Ange radien med en positiv siffra: ");
 
-            int controlledMinorAxis = VerifiedUserInput.GetPositveInt(minorAxis,
+            double controlledMinorAxis = VerifiedUserInput.GetPositiveDouble(minorAxis,
                                       "Fel format på radien vid skapande av Ellips objektet\n" +
                                       "Ange radien med en positiv siffra: ");
 
@@ -46,13 +46,13 @@ namespace OOPPolymorphism.Geometri
         }
 
 
-        // Public int MajorAxis and MinorAxis is accessors for the user to be able to get  
+        // Public double MajorAxis and MinorAxis is accessors for the user to be able to get  
         // the _MajorAxis and _MinorAxis of the Ellips object outside of the scope of the class
-        public int MajorAxis
+        public double MajorAxis
         {
             get { return _MajorAxis; }
         }
-        public int MinorAxis
+        public double MinorAxis
         {
             get { return _MinorAxis; }
         }

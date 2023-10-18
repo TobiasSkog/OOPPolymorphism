@@ -9,8 +9,8 @@ namespace OOPPolymorphism.Geometri
         // The Rektangel class requires the _Width and _Length attributes
         // The access modifier is set to protected to keep the attributes
         // inside the class and encapsulate them
-        protected int _Width { get; set; }
-        protected int _Length { get; set; }
+        protected double _Width { get; set; }
+        protected double _Length { get; set; }
 
 
         // The base constructor for the Rektangel class
@@ -24,34 +24,34 @@ namespace OOPPolymorphism.Geometri
 
         // A overload constructor for the Rektangel Class allowing the user
         // to pass in a width and a length when creating the Rektangel
-        public Rektangel(int width, int length)
+        public Rektangel(double width, double length)
         {
-            // Creating two new int variables to recieve the return of the GetPositiveInt method wich
+            // Creating two new double variables to recieve the return of the GetPositiveInt method wich
             // is a method in its own class designed to prompt the user for a new value
             // incase the original value passed in is not within the accepted range and 
             // could cause the program to crash when doing the Area calculation
             // The method will keep asking the user for a value until it recieves one
-            // that is accepted, takes a int and a prompt as input
-            int controlledWidth = VerifiedUserInput.GetPositveInt(width,
+            // that is accepted, takes a double and a prompt as input
+            double controlledWidth = VerifiedUserInput.GetPositiveDouble(width,
                                   "Fel format på höjden vid skapande av Rektangel objektet\n" +
-                                  "Ange bredden med ett positivt heltal: ");
+                                  "Ange bredden med en positiv siffra: ");
 
-            int controlledLength = VerifiedUserInput.GetPositveInt(length,
+            double controlledLength = VerifiedUserInput.GetPositiveDouble(length,
                                    "Fel format på radien vid skapande av Rektangel objektet\n" +
-                                   "Ange längden med ett positivt heltal: ");
+                                   "Ange längden med en positiv siffra: ");
 
             // Assigning _Width to controlledWidth
             _Width = controlledWidth;
             // Assigning _Length to controlledLength
             _Length = controlledLength;
         }
-        // Public int Width and Length is accessors for the user to be able to get the 
+        // Public double Width and Length is accessors for the user to be able to get the 
         // _Width and _Length of the Rektangel object outside of the scope of the class
-        public int Width
+        public double Width
         {
             get { return _Width; }
         }
-        public int Length
+        public double Length
         {
             get { return _Length; }
         }
