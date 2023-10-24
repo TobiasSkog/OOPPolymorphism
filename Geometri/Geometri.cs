@@ -5,10 +5,10 @@ namespace OOPPolymorphism.Geometri
     // that the subclasses will use
     public abstract class Geometri
     {
-        // Making _PI to a constant since it will always be the same no matter what
+        // Making PI to a constant since it will always be the same no matter what
         // assigning it to the Math.PI value to be able to do more accurate calculations
         // than the suggested `_pi = 3.141f` 
-        protected const double _PI = Math.PI;
+        protected const double PI = Math.PI;
 
         // Creating the abstract method double Area() that all the subclasses must inherit
         // The method have a public access modifier so that it can be called

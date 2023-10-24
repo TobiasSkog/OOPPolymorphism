@@ -6,20 +6,20 @@ namespace OOPPolymorphism.Geometri
     // New class Rektangel that inherits the Geometri class
     public class Rektangel : Geometri
     {
-        // The Rektangel class requires the _Width and _Length attributes
+        // The Rektangel class requires the Width and Length attributes
         // The access modifier is set to protected to keep the attributes
         // inside the class and encapsulate them
-        protected double _Width { get; set; }
-        protected double _Length { get; set; }
+        public double Width { get; private set; }
+        public double Length { get; private set; }
 
 
         // The base constructor for the Rektangel class
         public Rektangel()
         {
-            // Assigning _Width to a default value
-            _Width = 4;
-            // Assigning _Length to a default value
-            _Length = 4;
+            // Assigning Width to a default value
+            Width = 4;
+            // Assigning Length to a default value
+            Length = 4;
         }
 
         // A overload constructor for the Rektangel Class allowing the user
@@ -40,30 +40,20 @@ namespace OOPPolymorphism.Geometri
                                    "Fel format på radien vid skapande av Rektangel objektet\n" +
                                    "Ange längden med en positiv siffra: ");
 
-            // Assigning _Width to controlledWidth
-            _Width = controlledWidth;
-            // Assigning _Length to controlledLength
-            _Length = controlledLength;
-        }
-        // Public double Width and Length is accessors for the user to be able to get the 
-        // _Width and _Length of the Rektangel object outside of the scope of the class
-        public double Width
-        {
-            get { return _Width; }
-        }
-        public double Length
-        {
-            get { return _Length; }
+            // Assigning Width to controlledWidth
+            Width = controlledWidth;
+            // Assigning Length to controlledLength
+            Length = controlledLength;
         }
 
         // The SuperClass method Area is being implemented here with the
         // `override` keyword to be able to define it for the Rektangel class
         public override double Area()
         {
-            // Rektangel Area Formula: Area = _Length * _Width
+            // Rektangel Area Formula: Area = Length * Width
             // Creating a new double area and assigning it to the value 
             // of the Rektangel Area Formula seen above
-            double area = _Length * _Width;
+            double area = Length * Width;
             // returning the area
             return area;
         }

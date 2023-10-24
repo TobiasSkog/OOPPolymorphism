@@ -6,19 +6,19 @@ namespace OOPPolymorphism.Geometri
     // New class Parallellogram that inherits the Geometri class
     public class Parallellogram : Geometri
     {
-        // The Parallellogram class requires the _Height and _BaseParallelLength attributes
+        // The Parallellogram class requires the Height and BaseParallelLength attributes
         // The access modifier is set to protected to keep the attributes inside the class
         // and encapsulate them
-        protected double _Height { get; set; }
-        protected double _BaseParallelLength { get; set; }
+        public double Height { get; private set; }
+        public double BaseParallelLength { get; private set; }
 
         // The base constructor for the Rektangel class
         public Parallellogram()
         {
-            // Assigning _Height to a default value
-            _Height = 12;
-            // Assigning _BaseParallelLength to a default value
-            _BaseParallelLength = 18;
+            // Assigning Height to a default value
+            Height = 12;
+            // Assigning BaseParallelLength to a default value
+            BaseParallelLength = 18;
         }
         // A overload constructor for the Parallellogram Class allowing the user
         // to pass in a height and a baseParallelLength when creating the Parallellogram
@@ -37,33 +37,21 @@ namespace OOPPolymorphism.Geometri
                                                "Fel format på basbredden vid skapande av Triangel objektet\n" +
                                                "Ange baslängden med ett positivt heltal: ");
 
-            // Assigning _Height to controlledHeight
-            _Height = controlledHeight;
-            // Assigning _BaseParallelLength to controlledBaseParallelLength
-            _BaseParallelLength = controlledBaseParallelLength;
+            // Assigning Height to controlledHeight
+            Height = controlledHeight;
+            // Assigning BaseParallelLength to controlledBaseParallelLength
+            BaseParallelLength = controlledBaseParallelLength;
 
         }
-
-        // Public int Height and BaseParallelLength is accessors for the user to be able to get  
-        // the _Height and _BaseParallelLength of the Parallellogram object outside of the scope of the class
-        public double Height
-        {
-            get { return _Height; }
-        }
-        public double BaseParallelLength
-        {
-            get { return _BaseParallelLength; }
-        }
-
 
         // The SuperClass method Area is being implemented here with the
         // `override` keyword to be able to define it for the Parallellogram class
         public override double Area()
         {
-            // Parallellogram Area Formula: Area = _Height * _BaseParallelLength
+            // Parallellogram Area Formula: Area = Height * BaseParallelLength
             // Creating a new double area and assigning it to the value 
             // of the Parallellogram Area Formula seen above
-            double area = _Height * _BaseParallelLength;
+            double area = Height * BaseParallelLength;
             return area;
         }
     }

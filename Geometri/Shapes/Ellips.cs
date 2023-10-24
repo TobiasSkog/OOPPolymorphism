@@ -6,19 +6,19 @@ namespace OOPPolymorphism.Geometri
     // New class Ellips that inherits the Geometri class
     public class Ellips : Geometri
     {
-        // The Ellips class requires the _MajorAxis and _MinorAxis attributes
+        // The Ellips class requires the MajorAxis and MinorAxis attributes
         // The access modifier is set to protected to keep the attributes
         // inside the class and encapsulate them
-        protected double _MajorAxis { get; set; }
-        protected double _MinorAxis { get; set; }
+        public double MajorAxis { get; private set; }
+        public double MinorAxis { get; private set; }
 
         // The base constructor for the Ellips class
         public Ellips()
         {
-            // Assigning _MajorAxis to a default value
-            _MajorAxis = 9;
-            // Assigning _MinorAxis to a default value
-            _MinorAxis = 7;
+            // Assigning MajorAxis to a default value
+            MajorAxis = 9;
+            // Assigning MinorAxis to a default value
+            MinorAxis = 7;
         }
 
         // A overload constructor for the Ellips Class allowing the user
@@ -39,32 +39,21 @@ namespace OOPPolymorphism.Geometri
                                       "Fel format på radien vid skapande av Ellips objektet\n" +
                                       "Ange radien med en positiv siffra: ");
 
-            // Assigning _MajorAxis to controlledMajorAxis
-            _MajorAxis = controlledMajorAxis;
-            // Assigning _MinorAxis to controlledMinorAxis
-            _MinorAxis = controlledMinorAxis;
+            // Assigning MajorAxis to controlledMajorAxis
+            MajorAxis = controlledMajorAxis;
+            // Assigning MinorAxis to controlledMinorAxis
+            MinorAxis = controlledMinorAxis;
         }
 
-
-        // Public double MajorAxis and MinorAxis is accessors for the user to be able to get  
-        // the _MajorAxis and _MinorAxis of the Ellips object outside of the scope of the class
-        public double MajorAxis
-        {
-            get { return _MajorAxis; }
-        }
-        public double MinorAxis
-        {
-            get { return _MinorAxis; }
-        }
 
         // The SuperClass method Area is being implemented here with the
         // `override` keyword to be able to define it for the Ellips class
         public override double Area()
         {
-            // Ellips Area Formula: Area = _PI * _MajorAxis/2 * _MinorAxis/2
+            // Ellips Area Formula: Area = PI * MajorAxis/2 * MinorAxis/2
             // Creating a new double area and assigning it to the value 
             // of the Ellips Area Formula seen above
-            double area = _PI * _MajorAxis / 2 * _MinorAxis / 2;
+            double area = PI * MajorAxis / 2 * MinorAxis / 2;
             // returning the area
             return area;
         }
